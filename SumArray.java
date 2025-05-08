@@ -11,14 +11,17 @@ class SumArray {
 
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
+
         int size;
         System.out.print("Enter the size of the array: ");
         size = inp.nextInt();
         int arr[] = new int[size];
+
         System.out.println("Enter the elements of the array: ");
         for (int i = 0; i < size; i++) {
             arr[i] = inp.nextInt();
         }
+        
         int total = sumOfArray(arr);
         System.out.printf("The sum of the array is: %d", total);
         inp.close();
