@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class SumArray {
     public static int sumOfArray(int arr[]) {
         int total = 0;
@@ -8,8 +10,17 @@ class SumArray {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        Scanner inp = new Scanner(System.in);
+        int size;
+        System.out.print("Enter the size of the array: ");
+        size = inp.nextInt();
+        int arr[] = new int[size];
+        System.out.println("Enter the elements of the array: ");
+        for (int i = 0; i < size; i++) {
+            arr[i] = inp.nextInt();
+        }
         int total = sumOfArray(arr);
         System.out.printf("The sum of the array is: %d", total);
+        inp.close();
     }
 }
